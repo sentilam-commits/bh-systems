@@ -1140,4 +1140,11 @@ tbody tr:hover { background: rgba(252,238,240,0.6); }
     break-inside: avoid;
     page-break-inside: avoid;
   }
+  /* Evita páginas en blanco en móvil: el documento completo mide ~15000px
+     porque todas las secciones están apiladas en el DOM. Colapsarlas con
+     display:none las saca del flujo; visibility:hidden las oculta visualmente
+     pero NO las colapsa. Solo aplica al path de impresión desde la sección
+     #invoice; el modal ya vive fuera de .main. */
+  body.printing-invoice .app { min-height: 0 !important; }
+  body.printing-invoice .main > :not(#invoice) { display: none !important; }
 }
