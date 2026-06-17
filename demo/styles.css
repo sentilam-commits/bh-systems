@@ -64,7 +64,6 @@ img { display: block; max-width: 100%; }
   display: grid; place-items: center; padding: 4px;
 }
 .brand-logo img { width: 88px; height: auto; object-fit: contain; }
-.brand-back-hint { display: none; }
 
 .brand-identity {
   display: flex; flex-direction: column;
@@ -846,16 +845,6 @@ tbody tr:hover { background: rgba(252,238,240,0.6); }
   }
   .brand-logo img {
     width: 54px;
-  }
-  .brand-back-hint {
-    display: block;
-    font-size: 9px;
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    color: rgba(26, 10, 10, 0.38);
-    line-height: 1;
-    margin-top: 3px;
-    white-space: nowrap;
   }
   .brand > div {
     display: none;
