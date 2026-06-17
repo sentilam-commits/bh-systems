@@ -23,6 +23,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+  /* ─── Mobile card unification ─────────────────────────────────
+     Afecta únicamente los tres paneles de la sección "Cómo funciona"
+     en móvil (≤760px). El hero y el desktop no se tocan.
+  ──────────────────────────────────────────────────────────────── */
+  /* El texto del tab 03 es distinto en desktop y móvil. */
+  .tab-body--mobile { display: none; }
+
+  @media (max-width: 760px) {
+    .tab-body--desktop { display: none; }
+    .tab-body--mobile  { display: flex; }
+
+    /* Quita el chrome de teléfono del panel "Registrar movimiento".
+       El contenedor .tab-panel ya provee fondo, padding, radio y
+       sombra iguales para los tres; solo necesitamos neutralizar
+       el wrapper interno .panel-phone para que la imagen quede
+       al mismo nivel que las capturas de los otros dos pasos. */
+    .tab-panel .panel-phone {
+      width: 100%;       /* antes: min(76%,248px) centrado */
+      padding: 0;        /* antes: 9px */
+      border: none;      /* antes: 1px solid rgba(13,15,14,.24) */
+      border-radius: 0;  /* antes: 30px */
+      background: transparent; /* antes: var(--dark) */
+      box-shadow: none;  /* antes: sombra fuerte */
+    }
+
+    /* Aplica a la imagen el mismo radio y sombra que tienen las
+       imágenes de los otros dos paneles (regla .tab-panel img). */
+    .tab-panel .panel-phone img {
+      border-radius: var(--radius-md); /* antes: 21px con box-shadow:none */
+      box-shadow: 0 8px 32px rgba(13,15,14,.12);
+    }
+
+  }
+  </style>
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -109,9 +145,13 @@
             </button>
             <button class="step-tab" type="button" role="tab" id="tab-facturas" aria-selected="false" aria-controls="panel-facturas" data-tab-target="facturas" tabindex="-1">
               <span class="tab-num">03</span>
-              <span class="tab-body">
+              <span class="tab-body tab-body--desktop">
                 <strong>Revisa facturas y cobros</strong>
                 <small>Genera documentos y visualiza pagos recibidos y saldos pendientes.</small>
+              </span>
+              <span class="tab-body tab-body--mobile">
+                <strong>Vista diaria de la operación</strong>
+                <small>Consulta inventario, unidades vendidas y productos próximos a vencer.</small>
               </span>
               <span class="tab-progress" aria-hidden="true"></span>
             </button>
@@ -141,12 +181,15 @@
             </picture>
           </div>
           <div class="tab-panel" role="tabpanel" id="panel-facturas" aria-labelledby="tab-facturas" data-tab-panel="facturas" aria-hidden="true">
-            <img
-              src="assets/demo/facturacion-desktop.png"
-              width="2694"
-              height="1764"
-              loading="lazy"
-              alt="Vista de facturación y control de saldos pendientes">
+            <picture>
+              <source media="(max-width: 760px)" srcset="assets/demo/operacion-claramovil.png">
+              <img
+                src="assets/demo/facturacion-desktop.png"
+                width="2694"
+                height="1764"
+                loading="lazy"
+                alt="Vista diaria de inventario disponible, unidades vendidas y próximos a vencer">
+            </picture>
           </div>
         </div>
       </div>
