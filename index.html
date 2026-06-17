@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>BH Systems | Inventario, distribución y cobros por punto de venta</title>
+  <meta name="description" content="BH Systems crea sistemas para marcas que distribuyen productos físicos en supermercados, tiendas y puntos bajo consignación.">
+  <link rel="canonical" href="https://bhsystems.co">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bhsystems.co">
+  <meta property="og:title" content="BH Systems | Inventario y distribución">
+  <meta property="og:description" content="Controla inventario, reposiciones y cobros por punto de venta.">
+  <meta property="og:image" content="https://bhsystems.co/assets/demo/puntos-de-venta-desktop.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BH Systems | Inventario y distribución">
+  <meta name="twitter:description" content="Controla inventario, reposiciones y cobros por punto de venta.">
+  <meta name="twitter:image" content="https://bhsystems.co/assets/demo/puntos-de-venta-desktop.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand-link" href="/" aria-label="BH Systems">
+        <img src="assets/branding/bh-systems-logo.png" width="1801" height="190" alt="BH Systems">
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#demo">Demo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://demo.bhsystems.co" target="_blank" rel="noopener noreferrer">Ver demo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="site-container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Sistemas para inventario y distribución</p>
+          <h1 id="hero-title">Controla inventario, reposiciones y cobros por punto de venta.</h1>
+          <p class="hero-description">Centraliza entregas, ventas, stock, facturas y saldos en un sistema adaptado a tu operación.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://demo.bhsystems.co" target="_blank" rel="noopener noreferrer">Ver demo</a>
+            <a class="btn btn-secondary" href="https://wa.me/50761276311?text=Hola%20Binyamin%2C%20vi%20el%20demo%20de%20BH%20Systems%20y%20quiero%20conocer%20más." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          </div>
+
+          <p class="support-note">Demo ficticia de Café Cordillera, una operación de café creada para mostrar el sistema. Adaptamos productos, puntos de venta, movimientos y reportes a tu operación.</p>
+        </div>
+
+        <div class="hero-visual" aria-label="Vista previa del sistema en desktop y móvil">
+          <div class="browser-mockup">
+            <div class="browser-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <img
+              src="assets/demo/puntos-de-venta-desktop.png"
+              width="2690"
+              height="1920"
+              loading="eager"
+              alt="Vista desktop del control de rotación, reposición y cobros por cadena">
+          </div>
+
+          <div class="phone-mockup">
+            <div class="phone-top" aria-hidden="true"></div>
+            <img
+              src="assets/demo/registrar-movimiento-mobile.png"
+              width="780"
+              height="1622"
+              loading="eager"
+              alt="Vista móvil para registrar entregas, ventas, devoluciones, mermas y pagos">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-funciona" aria-labelledby="how-title">
+      <div class="site-container how-grid">
+        <div class="how-copy">
+          <p class="eyebrow">Cómo funciona</p>
+          <h2 id="how-title">Tres acciones para controlar la operación.</h2>
+          <p>Registra lo que ocurre, consulta cada punto de venta y mantén facturas y cobros organizados.</p>
+
+          <div class="tabs-list" role="tablist" aria-label="Pasos del sistema">
+            <button class="step-tab is-active" type="button" role="tab" id="tab-movimientos" aria-selected="true" aria-controls="panel-movimientos" data-tab-target="movimientos">
+              <span>01</span>
+              <strong>Registra movimientos</strong>
+              <small>Añade entregas, ventas, devoluciones, mermas y pagos desde el celular.</small>
+            </button>
+            <button class="step-tab" type="button" role="tab" id="tab-puntos" aria-selected="false" aria-controls="panel-puntos" data-tab-target="puntos" tabindex="-1">
+              <span>02</span>
+              <strong>Controla cada punto de venta</strong>
+              <small>Consulta stock, rotación, reposiciones, vencimientos y saldos por cadena.</small>
+            </button>
+            <button class="step-tab" type="button" role="tab" id="tab-facturas" aria-selected="false" aria-controls="panel-facturas" data-tab-target="facturas" tabindex="-1">
+              <span>03</span>
+              <strong>Revisa facturas y cobros</strong>
+              <small>Genera documentos y visualiza pagos recibidos y saldos pendientes.</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="tab-panels">
+          <div class="tab-panel is-active" role="tabpanel" id="panel-movimientos" aria-labelledby="tab-movimientos" data-tab-panel="movimientos">
+            <div class="panel-phone">
+              <img
+                src="assets/demo/registrar-movimiento-mobile.png"
+                width="780"
+                height="1622"
+                loading="lazy"
+                alt="Vista móvil para registrar entregas, ventas, devoluciones, mermas y pagos">
+            </div>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-puntos" aria-labelledby="tab-puntos" data-tab-panel="puntos" hidden>
+            <picture>
+              <source media="(max-width: 700px)" srcset="assets/demo/puntos-de-venta-mobile.png">
+              <img
+                src="assets/demo/puntos-de-venta-desktop.png"
+                width="2690"
+                height="1920"
+                loading="lazy"
+                alt="Vista desktop del control de rotación, reposición y cobros por cadena">
+            </picture>
+          </div>
+          <div class="tab-panel" role="tabpanel" id="panel-facturas" aria-labelledby="tab-facturas" data-tab-panel="facturas" hidden>
+            <img
+              src="assets/demo/facturacion-desktop.png"
+              width="2694"
+              height="1764"
+              loading="lazy"
+              alt="Vista de facturación y control de saldos pendientes">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="demo" aria-labelledby="demo-title">
+      <div class="site-container demo-grid">
+        <div>
+          <p class="eyebrow eyebrow-on-dark">Pruébalo</p>
+          <h2 id="demo-title">Abre el demo y recorre el sistema.</h2>
+          <p>Explora Café Cordillera, una operación ficticia de café, y prueba cómo se registran movimientos, se controlan puntos de venta y se revisan facturas y saldos.</p>
+          <p class="demo-secondary">¿Quieres verlo aplicado a tu marca? Cuéntame cómo distribuyes y te muestro cómo adaptar el sistema a tu operación.</p>
+        </div>
+
+        <div class="contact-card" id="contacto">
+          <p class="contact-name">Binyamin Doron</p>
+          <p class="contact-role">Fundador | BH Systems</p>
+          <div class="contact-actions">
+            <a class="btn btn-light" href="https://demo.bhsystems.co" target="_blank" rel="noopener noreferrer">Abrir demo</a>
+            <a class="btn btn-dark-secondary" href="https://wa.me/50761276311?text=Hola%20Binyamin%2C%20vi%20el%20demo%20de%20BH%20Systems%20y%20quiero%20conocer%20más." target="_blank" rel="noopener noreferrer">Hablar por WhatsApp</a>
+          </div>
+          <a class="email-link" href="mailto:binyamin@bhsystems.co">binyamin@bhsystems.co</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container footer-inner">
+      <div>
+        <p class="footer-brand">BH Systems</p>
+        <p>Sistemas de inventario y distribución para marcas de productos.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:binyamin@bhsystems.co">binyamin@bhsystems.co</a>
+        <a href="https://wa.me/50761276311?text=Hola%20Binyamin%2C%20vi%20el%20demo%20de%20BH%20Systems%20y%20quiero%20conocer%20más." target="_blank" rel="noopener noreferrer">+507 6127-6311</a>
+      </div>
+      <p class="copyright">© 2026 BH Systems</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
